@@ -12,7 +12,7 @@ download_file() {
 nstemp() {
     template_url="https://raw.githubusercontent.com/TheJolman/templates/refs/heads/main/any/shell.nix"
 
-    if ! download_file "$template_url" "."; then
+    if ! download_file "$template_url" "shell.nix"; then
         echo "Failed to set up project. Exiting."
         return 1
     fi
