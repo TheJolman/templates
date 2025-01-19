@@ -1,7 +1,6 @@
-{ pkgs ? import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {} }:
+{pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
   packages = with pkgs; [
-
   ];
 
   shellHook = ''
