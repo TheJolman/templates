@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTMX Application</title>
+  <meta name="description" content="A web application using HTMX">
+
+  <!-- HTMX Core -->
+  <script src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
+
+  <!-- Optional HTMX Extensions -->
+  <!-- <script src="https://unpkg.com/htmx.org@1.9.10/dist/ext/json-enc.js"></script> -->
+  <!-- <script src="https://unpkg.com/htmx.org@1.9.10/dist/ext/loading-states.js"></script> -->
+  <!-- <script src="https://unpkg.com/htmx.org@1.9.10/dist/ext/client-side-templates.js"></script> -->
+
+  <!-- Optional: Hyperscript for more complex interactions -->
+  <!-- <script src="https://unpkg.com/hyperscript.org@0.9.12"></script> -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Optional: Custom JavaScript -->
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <!-- Header content -->
+  </header>
+
+  <main>
+    <!-- HTMX Example: Trigger GET request -->
+    <button hx-get="/api/data" hx-target="#result" hx-swap="innerHTML"
+      hx-indicator=".loading-indicator">
+      Load Data
+    </button>
+
+    <!-- Loading indicator -->
+    <div class="loading-indicator" style="display:none;">Loading...</div>
+
+    <!-- Target for the HTMX response -->
+    <div id="result"></div>
+
+    <!-- More HTMX content -->
+  </main>
+
+  <footer>
+    <!-- Footer content -->
+  </footer>
+
+  <!-- Optional: HTMX debugging tool -->
+  <!-- Uncomment to turn on HTMX debugging -->
+  <!-- <script>htmx.logAll();</script> -->
+</body>
+
+</html>
